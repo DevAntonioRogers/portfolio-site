@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^10.16.4",
+    "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "next": "latest"
+    "react-icons": "^4.11.0",
+    "zustand": "^4.4.2"
   },
   "devDependencies": {
     "autoprefixer": "latest",
