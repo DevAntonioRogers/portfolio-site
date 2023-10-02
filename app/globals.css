@@ -2,26 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer styles {
+  .side-menu {
+    @apply fixed left-0 top-0 z-50 flex h-screen max-w-[300px] flex-col justify-between overflow-auto py-10 px-[10px]  max-lg:max-w-[150px] bg-[#ffffff];
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .social-icon {
+    @apply bg-dark-blue p-2 rounded-full cursor-pointer hover:bg-dark-blue/75;
+  }
+
+  .top-menu {
+    @apply max-w-[1250px] m-auto flex flex-col justify-between items-center gap-5;
+  }
+
+  .top-menu-info-container {
+    @apply flex justify-between w-full items-center max-xs:flex-col max-xs:items-start max-xs:gap-2;
+  }
+
+  .hero-container {
+    @apply w-full lg:h-screen h-fit bg-light-bg relative px-[40px] py-10 max-xs:px-[20px];
+  }
+
+  .hero-content-container {
+    @apply flex items-center justify-between h-full max-w-[1250px] mx-auto max-md:flex-col max-md:gap-10 max-md:text-center;
+  }
+
+  .section-title {
+    @apply bg-dark-red text-white text-sm font-semibold py-3 px-5 uppercase rounded-full flex items-center gap-2;
+  }
 }
